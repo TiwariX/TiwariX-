@@ -1,0 +1,148 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Surgical Care | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #1d1d1f;
+            --text-sub: #86868b;
+            --accent: #0071e3;
+            --card-bg: #f5f5f7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 15px 8%;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; border-bottom: 0.5px solid rgba(0,0,0,0.1);
+        }
+        .logo { font-weight: 600; font-size: 1.1rem; letter-spacing: -0.5px; }
+        .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 30px; font-size: 0.85rem; opacity: 0.8; }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 0 10%;
+            background: radial-gradient(circle at 50% 50%, #fbfbfd 0%, #ffffff 100%);
+        }
+        .hero span { font-size: 0.85rem; font-weight: 600; color: var(--accent); letter-spacing: 1.5px; margin-bottom: 20px; text-transform: uppercase; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 600; letter-spacing: -2px; margin-bottom: 25px; line-height: 1.1; color: #111; }
+        .hero p { font-size: 1.25rem; color: var(--text-sub); max-width: 600px; margin-bottom: 40px; }
+        
+        .btn-main { background: var(--accent); color: white; padding: 14px 35px; border-radius: 40px; text-decoration: none; font-weight: 500; transition: 0.4s; border: none; cursor: pointer; }
+        .btn-main:hover { background: #0077ed; transform: scale(1.03); }
+
+        /* Main Image Section */
+        .main-img-container {
+            width: 85%; max-width: 1200px; margin: 0 auto;
+            border-radius: 30px; overflow: hidden;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.1);
+        }
+        .main-img-container img { width: 100%; height: 600px; object-fit: cover; display: block; }
+
+        /* Grid Services */
+        .grid-section { padding: 120px 10%; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .card { 
+            background: var(--card-bg); border-radius: 30px; overflow: hidden;
+            transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 40px; }
+        .card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+        .card h3 { font-size: 1.5rem; margin-bottom: 12px; font-weight: 600; }
+        .card p { color: var(--text-sub); font-size: 1rem; }
+
+        /* Quote Banner */
+        .banner { 
+            background: #000; color: #fff; padding: 120px 10%; text-align: center; 
+            border-radius: 50px; width: 92%; margin: 80px auto;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1579154235884-332c298971d4?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+        }
+        .banner h2 { font-size: 2.5rem; font-weight: 400; font-style: italic; line-height: 1.4; max-width: 800px; margin: 0 auto; }
+
+        footer { padding: 60px 10%; text-align: center; color: var(--text-sub); border-top: 1px solid #eee; }
+
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; }
+            .main-img-container { width: 95%; height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SURGEON</div>
+        <div class="nav-links">
+            <a href="#">Philosophy</a>
+            <a href="#">Specialty</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <span>Trust in Expertise</span>
+        <h1>Excellence in every<br>surgical detail.</h1>
+        <p>Providing advanced surgical care with a focus on patient safety, innovation, and rapid recovery.</p>
+        <a href="#" class="btn-main">Book Appointment</a>
+    </section>
+
+    
+    <div class="main-img-container">
+        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop" alt="Operating Room">
+    </div>
+
+    <section class="grid-section">
+        <div class="grid">
+            <div class="card">
+                [attachment_0](attachment)
+                <img src="https://images.unsplash.com/photo-1584515933487-759f39b1c2ea?q=80&w=2070&auto=format&fit=crop" alt="Surgery">
+                <div class="card-content">
+                    <h3>Minimally Invasive</h3>
+                    <p>State-of-the-art laparoscopic procedures for minimal scarring and faster healing.</p>
+                </div>
+            </div>
+            <div class="card">
+                
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="Consultation">
+                <div class="card-content">
+                    <h3>General Surgery</h3>
+                    <p>A comprehensive range of surgical treatments performed with absolute precision.</p>
+                </div>
+            </div>
+            <div class="card">
+                
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop" alt="Medical Tech">
+                <div class="card-content">
+                    <h3>Advanced Care</h3>
+                    <p>Using the latest medical technology to ensure the highest success rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <h2>"The patient's life is a masterpiece of science and soul, handled with care."</h2>
+        <p style="margin-top: 30px; color: var(--accent); font-weight: 600;">DR. [NAME HERE]</p>
+    </section>
+
+    <footer>
+        <p>© 2026 SURGICAL CARE PORTFOLIO. All rights reserved.</p>
+        <p style="font-size: 0.7rem; margin-top: 10px;">Designed for Professional Excellence</p>
+    </footer>
+
+</body>
+</html>
