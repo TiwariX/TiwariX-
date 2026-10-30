@@ -1,148 +1,1170 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Surgical Care | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #ffffff;
-            --text-main: #1d1d1f;
-            --text-sub: #86868b;
-            --accent: #0071e3;
-            --card-bg: #f5f5f7;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6f7f5">
+<title>TIWARI LEDGER | Himanshu Tiwari</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg); color: var(--text-main); line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-        /* Navbar */
-        nav {
-            position: fixed;
-            top: 0; width: 100%;
-            padding: 15px 8%;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            display: flex; justify-content: space-between; align-items: center;
-            z-index: 1000; border-bottom: 0.5px solid rgba(0,0,0,0.1);
-        }
-        .logo { font-weight: 600; font-size: 1.1rem; letter-spacing: -0.5px; }
-        .nav-links a { text-decoration: none; color: var(--text-main); margin-left: 30px; font-size: 0.85rem; opacity: 0.8; }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center; padding: 0 10%;
-            background: radial-gradient(circle at 50% 50%, #fbfbfd 0%, #ffffff 100%);
-        }
-        .hero span { font-size: 0.85rem; font-weight: 600; color: var(--accent); letter-spacing: 1.5px; margin-bottom: 20px; text-transform: uppercase; }
-        .hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 600; letter-spacing: -2px; margin-bottom: 25px; line-height: 1.1; color: #111; }
-        .hero p { font-size: 1.25rem; color: var(--text-sub); max-width: 600px; margin-bottom: 40px; }
-        
-        .btn-main { background: var(--accent); color: white; padding: 14px 35px; border-radius: 40px; text-decoration: none; font-weight: 500; transition: 0.4s; border: none; cursor: pointer; }
-        .btn-main:hover { background: #0077ed; transform: scale(1.03); }
-
-        /* Main Image Section */
-        .main-img-container {
-            width: 85%; max-width: 1200px; margin: 0 auto;
-            border-radius: 30px; overflow: hidden;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.1);
-        }
-        .main-img-container img { width: 100%; height: 600px; object-fit: cover; display: block; }
-
-        /* Grid Services */
-        .grid-section { padding: 120px 10%; }
-        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .card { 
-            background: var(--card-bg); border-radius: 30px; overflow: hidden;
-            transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 40px; }
-        .card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
-        .card h3 { font-size: 1.5rem; margin-bottom: 12px; font-weight: 600; }
-        .card p { color: var(--text-sub); font-size: 1rem; }
-
-        /* Quote Banner */
-        .banner { 
-            background: #000; color: #fff; padding: 120px 10%; text-align: center; 
-            border-radius: 50px; width: 92%; margin: 80px auto;
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1579154235884-332c298971d4?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover; background-position: center;
-        }
-        .banner h2 { font-size: 2.5rem; font-weight: 400; font-style: italic; line-height: 1.4; max-width: 800px; margin: 0 auto; }
-
-        footer { padding: 60px 10%; text-align: center; color: var(--text-sub); border-top: 1px solid #eee; }
-
-        @media (max-width: 900px) {
-            .grid { grid-template-columns: 1fr; }
-            .main-img-container { width: 95%; height: 400px; }
-        }
-    </style>
+:root{
+  --bg:#f5f6f4;
+  --surface:#ffffff;
+  --text:#202923;
+  --muted:#89928c;
+  --border:#e9ede9;
+  --green:#176b4a;
+  --green-light:#eaf5ee;
+  --red:#c84c4c;
+  --gold:#b58b45;
+  --shadow:0 4px 20px rgba(20,40,28,.035);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'DM Sans',sans-serif;
+}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.app{
+  display:grid;
+  grid-template-columns:245px 1fr;
+  min-height:100vh;
+}
+.sidebar{
+  background:#fff;
+  border-right:1px solid var(--border);
+  padding:28px 19px;
+  position:sticky;
+  top:0;
+  height:100vh;
+}
+.brand{
+  padding:5px 9px 28px;
+  border-bottom:1px solid var(--border);
+}
+.brand h2{
+  font-family:Manrope,sans-serif;
+  letter-spacing:1.4px;
+  font-size:21px;
+  font-weight:800;
+}
+.brand h2 span{color:var(--green)}
+.brand p{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:5px;
+  letter-spacing:1.3px;
+}
+.profile{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:23px 8px;
+}
+.avatar{
+  width:40px;height:40px;
+  background:var(--green-light);
+  color:var(--green);
+  border-radius:12px;
+  display:grid;place-items:center;
+  font-weight:800;
+}
+.profile strong{font-size:13px}
+.profile small{display:block;color:var(--muted);margin-top:4px}
+.nav-title{
+  color:#a0aaa3;
+  font-size:10px;
+  letter-spacing:1.5px;
+  padding:10px;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  margin:3px 0;
+  border-radius:9px;
+  color:#727d75;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  border:0;
+  background:transparent;
+  width:100%;
+  text-align:left;
+}
+.nav:hover,.nav.active{
+  background:var(--green-light);
+  color:var(--green);
+}
+.nav .ico{font-size:17px;width:20px}
+.sidebar-footer{
+  position:absolute;
+  bottom:24px;
+  left:25px;
+  color:#a0aaa3;
+  font-size:11px;
+  line-height:1.7;
+}
+.main{padding:32px 38px;min-width:0}
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  margin-bottom:30px;
+  flex-wrap:wrap;
+}
+.topbar h1{
+  font-family:Manrope,sans-serif;
+  font-size:25px;
+  font-weight:800;
+}
+.topbar p{color:var(--muted);font-size:12px;margin-top:5px}
+.top-actions{display:flex;gap:10px;align-items:center}
+.month-input,.field{
+  border:1px solid var(--border);
+  border-radius:9px;
+  background:#fff;
+  padding:11px 13px;
+  color:var(--text);
+  outline:none;
+}
+.month-input{font-size:12px}
+.btn{
+  border:0;
+  border-radius:9px;
+  padding:12px 16px;
+  font-size:12px;
+  font-weight:700;
+  transition:.2s;
+}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:#10583c}
+.btn-light{background:#fff;border:1px solid var(--border);color:var(--text)}
+.btn-danger{background:#fff0f0;color:var(--red)}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:15px;
+  margin-bottom:20px;
+}
+.stat{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:13px;
+  padding:20px;
+  box-shadow:var(--shadow);
+}
+.stat-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.stat-label{font-size:12px;color:var(--muted)}
+.stat-icon{
+  width:34px;height:34px;border-radius:10px;
+  background:#f1f4f1;display:grid;place-items:center;
+}
+.stat-value{
+  font-family:Manrope,sans-serif;
+  font-size:25px;font-weight:800;
+  margin:15px 0 5px;
+  overflow-wrap:anywhere;
+}
+.stat-note{font-size:11px;color:var(--muted)}
+.green{color:var(--green)}
+.red{color:var(--red)}
+.gold{color:var(--gold)}
+.layout{
+  display:grid;
+  grid-template-columns:1.45fr 1fr;
+  gap:17px;
+  margin-bottom:20px;
+}
+.panel{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:13px;
+  padding:21px;
+  box-shadow:var(--shadow);
+  margin-bottom:18px;
+  min-width:0;
+}
+.panel-heading{
+  display:flex;justify-content:space-between;
+  align-items:center;gap:10px;margin-bottom:20px;
+}
+.panel-heading h3{font-size:14px;font-weight:800}
+.panel-heading small{color:var(--muted);font-size:11px}
+.rent-amount{
+  font-family:Manrope,sans-serif;
+  font-size:29px;font-weight:800;
+  margin:5px 0;
+}
+.progress{
+  height:8px;background:#edf0ed;
+  border-radius:20px;overflow:hidden;margin:17px 0;
+}
+.progress div{
+  height:100%;background:var(--green);
+  border-radius:20px;transition:.3s;
+}
+.rent-details{
+  display:flex;justify-content:space-between;
+  font-size:12px;margin-top:12px;
+}
+.rent-details span{color:var(--muted)}
+.rent-status{
+  padding:12px;background:#f3f7f3;
+  border-radius:9px;color:var(--green);
+  font-size:12px;margin-top:17px;
+  line-height:1.6;
+}
+.category-row{margin:17px 0}
+.category-head{
+  display:flex;justify-content:space-between;
+  font-size:12px;margin-bottom:8px;
+}
+.category-head span:first-child{color:#68746b}
+.category-bar{
+  height:7px;background:#edf0ed;
+  border-radius:20px;overflow:hidden;
+}
+.category-bar div{
+  height:100%;background:var(--green);
+  border-radius:20px;
+}
+.form-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:13px;
+}
+.form-group label{
+  display:block;font-size:11px;
+  color:#69756d;margin-bottom:7px;
+}
+.field{width:100%;font-size:12px}
+.form-group.full{grid-column:1/-1}
+.field:focus{border-color:var(--green)}
+.form-actions{display:flex;gap:10px;margin-top:18px}
+.form-actions button{flex:1}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:660px}
+th{
+  font-size:10px;color:#929d95;
+  letter-spacing:.6px;text-align:left;
+  padding:12px;border-bottom:1px solid var(--border);
+}
+td{
+  padding:14px 12px;
+  border-bottom:1px solid #f0f2f0;
+  font-size:12px;
+}
+td small{display:block;color:var(--muted);margin-top:4px}
+.amount-in{color:var(--green);font-weight:800}
+.amount-out{color:var(--red);font-weight:800}
+.badge{
+  display:inline-block;
+  padding:5px 8px;
+  background:#f0f4f0;
+  border-radius:6px;
+  font-size:10px;
+}
+.row-actions{display:flex;gap:5px}
+.row-actions button{
+  border:1px solid var(--border);
+  background:white;padding:6px 8px;
+  border-radius:6px;font-size:11px;
+}
+.empty{
+  text-align:center;padding:35px;
+  color:var(--muted);font-size:12px;
+}
+.review-box{
+  background:#f2f7f2;
+  border:1px solid #e0ebe0;
+  padding:16px;border-radius:10px;
+  font-size:12px;line-height:1.9;
+  color:#385c46;
+}
+.review-box strong{color:var(--green)}
+.section{display:none}
+.section.active{display:block}
+.filter-select{max-width:150px}
+.footer{
+  text-align:center;font-size:10px;
+  color:#a0aaa3;padding:20px;
+}
+.mobile-head{display:none}
+@media(max-width:1050px){
+  .app{grid-template-columns:210px 1fr}
+  .main{padding:25px 20px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:720px){
+  .app{display:block}
+  .sidebar{
+    position:fixed;z-index:10;top:auto;bottom:0;
+    left:0;width:100%;height:auto;
+    padding:7px 5px;
+    border-right:0;border-top:1px solid var(--border);
+  }
+  .brand,.profile,.nav-title,.sidebar-footer{display:none}
+  .nav-list{
+    display:flex;justify-content:space-around;gap:3px;
+  }
+  .nav{
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    gap:3px;padding:9px 3px;
+    font-size:9px;flex:1;
+  }
+  .nav .ico{font-size:17px;width:auto}
+  .main{padding:23px 14px 100px}
+  .layout{grid-template-columns:1fr}
+  .topbar h1{font-size:21px}
+  .top-actions{width:100%;justify-content:space-between}
+  .month-input{flex:1;min-width:0}
+  .grid{gap:9px}
+  .stat{padding:14px}
+  .stat-value{font-size:20px}
+  .panel{padding:16px}
+}
+@media(max-width:390px){
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:auto}
+  .stat-value{font-size:18px}
+}
+</style>
 </head>
+
 <body>
+<div class="app">
 
-    <nav>
-        <div class="logo">SURGEON</div>
-        <div class="nav-links">
-            <a href="#">Philosophy</a>
-            <a href="#">Specialty</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="brand">
+    <h2>TIWARI <span>LEDGER.</span></h2>
+    <p>PERSONAL FINANCE SYSTEM</p>
+  </div>
 
-    <section class="hero">
-        <span>Trust in Expertise</span>
-        <h1>Excellence in every<br>surgical detail.</h1>
-        <p>Providing advanced surgical care with a focus on patient safety, innovation, and rapid recovery.</p>
-        <a href="#" class="btn-main">Book Appointment</a>
-    </section>
+  <div class="profile">
+    <div class="avatar">HT</div>
+    <div>
+      <strong>Himanshu Tiwari</strong>
+      <small>Personal Account</small>
+    </div>
+  </div>
 
-    
-    <div class="main-img-container">
-        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop" alt="Operating Room">
+  <div class="nav-title">MAIN MENU</div>
+  <div class="nav-list">
+    <button class="nav active" data-page="dashboard"><span class="ico">⌂</span>Dashboard</button>
+    <button class="nav" data-page="transactions"><span class="ico">⇄</span>Transactions</button>
+    <button class="nav" data-page="add"><span class="ico">＋</span>Add Payment</button>
+    <button class="nav" data-page="reports"><span class="ico">▥</span>Reports</button>
+    <button class="nav" data-page="settings"><span class="ico">⚙</span>Settings</button>
+  </div>
+
+  <div class="sidebar-footer">
+    TIWARI LEDGER v2.0<br>
+    Designed for Himanshu Tiwari
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="topbar">
+  <div>
+    <h1 id="pageTitle">Dashboard</h1>
+    <p id="pageSubtitle">Your money, clearly organized.</p>
+  </div>
+  <div class="top-actions">
+    <input type="month" id="monthPicker" class="month-input">
+    <button class="btn btn-primary" onclick="showPage('add')">＋ Add New</button>
+  </div>
+</header>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="section active">
+
+  <div class="grid">
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-label">Total Balance</span>
+        <span class="stat-icon">₹</span>
+      </div>
+      <div class="stat-value" id="balance">₹0</div>
+      <div class="stat-note">Income minus expenses</div>
     </div>
 
-    <section class="grid-section">
-        <div class="grid">
-            <div class="card">
-                [attachment_0](attachment)
-                <img src="https://images.unsplash.com/photo-1584515933487-759f39b1c2ea?q=80&w=2070&auto=format&fit=crop" alt="Surgery">
-                <div class="card-content">
-                    <h3>Minimally Invasive</h3>
-                    <p>State-of-the-art laparoscopic procedures for minimal scarring and faster healing.</p>
-                </div>
-            </div>
-            <div class="card">
-                
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="Consultation">
-                <div class="card-content">
-                    <h3>General Surgery</h3>
-                    <p>A comprehensive range of surgical treatments performed with absolute precision.</p>
-                </div>
-            </div>
-            <div class="card">
-                
-                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop" alt="Medical Tech">
-                <div class="card-content">
-                    <h3>Advanced Care</h3>
-                    <p>Using the latest medical technology to ensure the highest success rates.</p>
-                </div>
-            </div>
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-label">Total Income</span>
+        <span class="stat-icon">↙</span>
+      </div>
+      <div class="stat-value green" id="income">₹0</div>
+      <div class="stat-note">Selected month</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-label">Total Expenses</span>
+        <span class="stat-icon">↗</span>
+      </div>
+      <div class="stat-value red" id="expenses">₹0</div>
+      <div class="stat-note">Selected month</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-top">
+        <span class="stat-label">Rent Remaining</span>
+        <span class="stat-icon">⌂</span>
+      </div>
+      <div class="stat-value gold" id="rentLeft">₹2,000</div>
+      <div class="stat-note">Monthly rent target</div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="panel">
+      <div class="panel-heading">
+        <h3>Room Rent Tracker</h3>
+        <small>Monthly fixed rent</small>
+      </div>
+      <div class="stat-label">Your monthly rent</div>
+      <div class="rent-amount">₹<span id="rentTarget">2,000</span></div>
+      <div class="progress"><div id="rentProgress"></div></div>
+      <div class="rent-details">
+        <span>Paid: <strong id="rentPaid">₹0</strong></span>
+        <span>Remaining: <strong id="rentRemaining">₹2,000</strong></span>
+      </div>
+      <div class="rent-status" id="rentMessage">
+        Your rent payment status will appear here.
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-heading">
+        <h3>Expense Breakdown</h3>
+        <small>This month</small>
+      </div>
+      <div id="categoryChart"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>Smart Financial Review</h3>
+      <small>Monthly insights</small>
+    </div>
+    <div id="smartReview" class="review-box">
+      Add transactions to generate your review.
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>Recent Transactions</h3>
+      <button class="btn btn-light" onclick="showPage('transactions')">View All →</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>DETAILS</th><th>CATEGORY</th>
+            <th>DATE</th><th>TYPE</th><th>AMOUNT</th>
+          </tr>
+        </thead>
+        <tbody id="recentTable"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSACTIONS -->
+<section id="transactions" class="section">
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>All Transactions</h3>
+      <select id="typeFilter" class="field filter-select">
+        <option value="All">All Types</option>
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>DETAILS</th><th>CATEGORY</th>
+            <th>DATE</th><th>METHOD</th>
+            <th>TYPE</th><th>AMOUNT</th><th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody id="allTable"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ADD TRANSACTION -->
+<section id="add" class="section">
+  <div class="panel">
+    <div class="panel-heading">
+      <h3 id="formTitle">Record a Transaction</h3>
+      <small>Keep every rupee accounted for</small>
+    </div>
+
+    <form id="transactionForm">
+      <input type="hidden" id="editId">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Transaction Type</label>
+          <select class="field" id="txType">
+            <option value="Expense">Expense</option>
+            <option value="Income">Income</option>
+          </select>
         </div>
-    </section>
 
-    <section class="banner">
-        <h2>"The patient's life is a masterpiece of science and soul, handled with care."</h2>
-        <p style="margin-top: 30px; color: var(--accent); font-weight: 600;">DR. [NAME HERE]</p>
-    </section>
+        <div class="form-group">
+          <label>Category</label>
+          <select class="field" id="txCategory">
+            <option>Rent</option>
+            <option>Sabji</option>
+            <option>Kirana</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Education</option>
+            <option>Personal</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-    <footer>
-        <p>© 2026 SURGICAL CARE PORTFOLIO. All rights reserved.</p>
-        <p style="font-size: 0.7rem; margin-top: 10px;">Designed for Professional Excellence</p>
-    </footer>
+        <div class="form-group full">
+          <label>Description</label>
+          <input class="field" id="txDescription"
+            placeholder="e.g. Monthly room rent, potatoes, rice..." required>
+        </div>
 
+        <div class="form-group">
+          <label>Amount (₹)</label>
+          <input class="field" id="txAmount" type="number"
+            min="0.01" step="0.01" placeholder="Enter amount" required>
+        </div>
+
+        <div class="form-group">
+          <label>Payment Method</label>
+          <select class="field" id="txMethod">
+            <option>Cash</option>
+            <option>UPI</option>
+            <option>Debit Card</option>
+            <option>Bank Transfer</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label>Date</label>
+          <input class="field" id="txDate" type="date" required>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit" id="saveButton">Save Transaction</button>
+        <button class="btn btn-light" type="button" onclick="resetForm()">Reset</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- REPORTS -->
+<section id="reports" class="section">
+  <div class="grid">
+    <div class="stat">
+      <div class="stat-label">Total Transactions</div>
+      <div class="stat-value" id="reportCount">0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Average Expense / Day</div>
+      <div class="stat-value" id="dailyAverage">₹0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Highest Expense</div>
+      <div class="stat-value red" id="highestExpense">₹0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Savings Rate</div>
+      <div class="stat-value green" id="savingRate">0%</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>Category-wise Analysis</h3>
+    </div>
+    <div id="reportCategories"></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>Monthly Financial Summary</h3>
+    </div>
+    <div id="reportSummary" class="review-box"></div>
+  </div>
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="section">
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>Personal Settings</h3>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Account Name</label>
+        <input class="field" value="Himanshu Tiwari" disabled>
+      </div>
+      <div class="form-group">
+        <label>Monthly Room Rent (₹)</label>
+        <input class="field" type="number" min="0" id="rentSetting">
+      </div>
+    </div>
+    <button class="btn btn-primary" style="margin-top:18px"
+      onclick="saveSettings()">Save Settings</button>
+  </div>
+
+  <div class="panel">
+    <div class="panel-heading">
+      <h3>Data Management</h3>
+    </div>
+    <p class="stat-note" style="line-height:1.8;margin-bottom:15px">
+      Your data is stored in this browser. Download backups regularly.
+      JSON backup can be restored later.
+    </p>
+    <div class="form-actions">
+      <button class="btn btn-primary" onclick="downloadBackup()">Download Backup</button>
+      <button class="btn btn-light" onclick="exportCSV()">Export CSV</button>
+    </div>
+    <div style="margin-top:20px">
+      <label style="font-size:12px;margin-bottom:8px;display:block">Restore JSON Backup</label>
+      <input type="file" id="importFile" accept=".json,application/json" class="field">
+      <button class="btn btn-light" style="margin-top:10px"
+        onclick="importBackup()">Import Backup</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3 style="color:var(--red);font-size:13px;margin-bottom:12px">Danger Zone</h3>
+    <p class="stat-note" style="margin-bottom:14px">
+      Permanently clear all transaction records from this browser.
+    </p>
+    <button class="btn btn-danger" onclick="deleteAll()">Delete All Data</button>
+  </div>
+</section>
+
+<div class="footer">
+  TIWARI LEDGER © 2026 · HIMANSHU TIWARI · TRACK SMART. SPEND WISE.
+</div>
+
+</main>
+</div>
+
+<script>
+// -----------------------------------
+// TIWARI LEDGER - DATA MANAGEMENT
+// -----------------------------------
+
+const KEY = "tiwari_ledger_v2";
+const SETTINGS_KEY = "tiwari_ledger_settings";
+
+function localToday(){
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+}
+
+let transactions = [];
+let settings = {rent:2000};
+
+try {
+  const stored = JSON.parse(localStorage.getItem(KEY) || "[]");
+  if(Array.isArray(stored)) transactions = stored;
+  const savedSettings = JSON.parse(localStorage.getItem(SETTINGS_KEY) || "{}");
+  settings.rent = Number(savedSettings.rent ?? 2000);
+  if(!Number.isFinite(settings.rent) || settings.rent < 0) settings.rent = 2000;
+} catch(e) {
+  console.error("Could not load data",e);
+}
+
+const $ = id => document.getElementById(id);
+const rupee = n => "₹" + Number(n).toLocaleString("en-IN",{maximumFractionDigits:2});
+
+function saveData(){
+  try{
+    localStorage.setItem(KEY,JSON.stringify(transactions));
+    localStorage.setItem(SETTINGS_KEY,JSON.stringify(settings));
+  }catch(e){
+    alert("Storage error! Please download your backup.");
+  }
+}
+
+function selectedMonth(){
+  return $("monthPicker").value;
+}
+
+function monthData(){
+  return transactions.filter(t=>t.date.startsWith(selectedMonth()));
+}
+
+function safeText(value){
+  return String(value ?? "");
+}
+
+function selectedTotals(){
+  const data = monthData();
+  const income = data.filter(t=>t.type==="Income")
+    .reduce((s,t)=>s+Number(t.amount),0);
+  const expense = data.filter(t=>t.type==="Expense")
+    .reduce((s,t)=>s+Number(t.amount),0);
+  const rent = data.filter(t=>t.type==="Expense" && t.category==="Rent")
+    .reduce((s,t)=>s+Number(t.amount),0);
+
+  return {data,income,expense,rent,balance:income-expense};
+}
+
+// -----------------------------------
+// NAVIGATION
+// -----------------------------------
+
+const pageInfo = {
+  dashboard:["Dashboard","Your money, clearly organized."],
+  transactions:["Transactions","Every payment, in one place."],
+  add:["Add Transaction","Record your income or expenses."],
+  reports:["Financial Reports","Understand your spending habits."],
+  settings:["Settings","Manage your account and data."]
+};
+
+function showPage(page){
+  document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+  document.querySelectorAll(".nav").forEach(n=>n.classList.remove("active"));
+
+  $(page).classList.add("active");
+  document.querySelectorAll(".nav").forEach(n=>{
+    if(n.dataset.page===page) n.classList.add("active");
+  });
+
+  $("pageTitle").textContent=pageInfo[page][0];
+  $("pageSubtitle").textContent=pageInfo[page][1];
+
+  if(page==="add" && !$("editId").value) resetForm(false);
+  render();
+}
+
+document.querySelectorAll(".nav").forEach(button=>{
+  button.addEventListener("click",()=>showPage(button.dataset.page));
+});
+
+// -----------------------------------
+// ADD / EDIT TRANSACTION
+// -----------------------------------
+
+$("monthPicker").value=localToday().slice(0,7);
+$("txDate").value=localToday();
+
+$("transactionForm").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const id=$("editId").value;
+  const type=$("txType").value;
+  const category=$("txCategory").value;
+  const description=$("txDescription").value.trim();
+  const amount=Number($("txAmount").value);
+  const date=$("txDate").value;
+
+  if(!description || !date || !Number.isFinite(amount) || amount<=0){
+    alert("Please enter valid transaction details.");
+    return;
+  }
+
+  const transaction={
+    id:id || (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString()+Math.random()),
+    type,category,description,amount,
+    method:$("txMethod").value,date
+  };
+
+  if(id){
+    const index=transactions.findIndex(t=>t.id===id);
+    if(index!==-1) transactions[index]=transaction;
+  }else{
+    transactions.push(transaction);
+  }
+
+  saveData();
+  $("monthPicker").value=date.slice(0,7);
+  resetForm();
+  showPage("dashboard");
+});
+
+function resetForm(clear=true){
+  $("transactionForm").reset();
+  $("editId").value="";
+  $("txDate").value=localToday();
+  $("formTitle").textContent="Record a Transaction";
+  $("saveButton").textContent="Save Transaction";
+}
+
+function editTransaction(id){
+  const t=transactions.find(x=>x.id===id);
+  if(!t)return;
+
+  $("editId").value=t.id;
+  $("txType").value=t.type;
+  $("txCategory").value=t.category;
+  $("txDescription").value=t.description;
+  $("txAmount").value=t.amount;
+  $("txMethod").value=t.method;
+  $("txDate").value=t.date;
+
+  $("formTitle").textContent="Edit Transaction";
+  $("saveButton").textContent="Update Transaction";
+  showPage("add");
+}
+
+function deleteTransaction(id){
+  if(!confirm("Are you sure you want to delete this transaction?"))return;
+  transactions=transactions.filter(t=>t.id!==id);
+  saveData();
+  render();
+}
+
+// -----------------------------------
+// TABLE GENERATION
+// -----------------------------------
+
+function createCell(tr,value){
+  const td=document.createElement("td");
+  td.textContent=safeText(value);
+  tr.appendChild(td);
+  return td;
+}
+
+function createTransactionRow(t,showActions=false){
+  const tr=document.createElement("tr");
+
+  const detail=document.createElement("td");
+  detail.textContent=t.description;
+  tr.appendChild(detail);
+
+  createCell(tr,t.category);
+  createCell(tr,t.date);
+
+  if(showActions){
+    createCell(tr,t.method);
+  }
+
+  const typeCell=createCell(tr,t.type);
+  typeCell.innerHTML="";
+  const badge=document.createElement("span");
+  badge.className="badge";
+  badge.textContent=t.type;
+  typeCell.appendChild(badge);
+
+  const amount=createCell(tr,(t.type==="Income"?"+":"-")+rupee(t.amount));
+  amount.className=t.type==="Income"?"amount-in":"amount-out";
+
+  if(showActions){
+    const action=createCell(tr,"");
+    const wrap=document.createElement("div");
+    wrap.className="row-actions";
+
+    const edit=document.createElement("button");
+    edit.textContent="Edit";
+    edit.onclick=()=>editTransaction(t.id);
+
+    const del=document.createElement("button");
+    del.textContent="Delete";
+    del.style.color="#c84c4c";
+    del.onclick=()=>deleteTransaction(t.id);
+
+    wrap.append(edit,del);
+    action.appendChild(wrap);
+  }
+  return tr;
+}
+
+// -----------------------------------
+// CATEGORY REPORTS
+// -----------------------------------
+
+const categories=["Rent","Sabji","Kirana","Food","Travel","Education","Personal","Other"];
+
+function categoryHTML(data){
+  const expenses=data.filter(t=>t.type==="Expense");
+  const total=expenses.reduce((s,t)=>s+Number(t.amount),0);
+
+  return categories.map(category=>{
+    const value=expenses.filter(t=>t.category===category)
+      .reduce((s,t)=>s+Number(t.amount),0);
+    const percentage=total ? value/total*100 : 0;
+
+    return `
+      <div class="category-row">
+        <div class="category-head">
+          <span>${category}</span>
+          <strong>${rupee(value)}</strong>
+        </div>
+        <div class="category-bar">
+          <div style="width:${percentage}%"></div>
+        </div>
+      </div>`;
+  }).join("");
+}
+
+// -----------------------------------
+// DASHBOARD
+// -----------------------------------
+
+function renderDashboard(){
+  const {data,income,expense,rent,balance}=selectedTotals();
+  const remaining=Math.max(0,settings.rent-rent);
+  const progress=settings.rent===0?100:Math.min(100,rent/settings.rent*100);
+
+  $("balance").textContent=rupee(balance);
+  $("balance").className="stat-value "+(balance>=0?"green":"red");
+  $("income").textContent=rupee(income);
+  $("expenses").textContent=rupee(expense);
+  $("rentLeft").textContent=rupee(remaining);
+  $("rentTarget").textContent=Number(settings.rent).toLocaleString("en-IN");
+
+  $("rentPaid").textContent=rupee(rent);
+  $("rentRemaining").textContent=rupee(remaining);
+  $("rentProgress").style.width=progress+"%";
+
+  $("rentMessage").textContent=settings.rent===0
+    ?"No rent target configured."
+    :rent>=settings.rent
+      ?"✓ Your monthly rent target has been completed."
+      :`Rent payment remaining: ${rupee(remaining)}.`;
+
+  $("categoryChart").innerHTML=categoryHTML(data);
+
+  const variable=data.filter(t=>t.type==="Expense" && t.category!=="Rent");
+  const sabji=variable.filter(t=>t.category==="Sabji").reduce((s,t)=>s+t.amount,0);
+  const kirana=variable.filter(t=>t.category==="Kirana").reduce((s,t)=>s+t.amount,0);
+  const top=[...categories].map(c=>({
+    name:c,
+    amount:data.filter(t=>t.type==="Expense" && t.category===c)
+      .reduce((s,t)=>s+t.amount,0)
+  })).sort((a,b)=>b.amount-a.amount)[0];
+
+  let review=`You received <strong>${rupee(income)}</strong> and spent <strong>${rupee(expense)}</strong> this month. `;
+
+  if(!data.length){
+    review="No transactions recorded yet. Start by adding your income or first expense.";
+  }else{
+    review+=`Your current balance is <strong>${rupee(balance)}</strong>. `;
+    review+=`Your highest spending category is <strong>${top.name}</strong> (${rupee(top.amount)}). `;
+
+    if(sabji>kirana)review+="Your Sabji spending is higher than Kirana spending.";
+    else if(kirana>sabji)review+="Your Kirana spending is higher than Sabji spending.";
+    else review+="Your Sabji and Kirana spending are equal.";
+
+    if(balance<0)review+=" Consider reviewing your expenses to avoid overspending.";
+    else if(income>0 && balance>0)review+=" You have a positive monthly balance. Keep building your savings!";
+  }
+
+  $("smartReview").innerHTML=review;
+
+  const sorted=[...data].sort((a,b)=>b.date.localeCompare(a.date));
+  $("recentTable").innerHTML="";
+  if(!sorted.length){
+    $("recentTable").innerHTML='<tr><td colspan="5" class="empty">No transactions this month.</td></tr>';
+  }else{
+    sorted.slice(0,5).forEach(t=>$("recentTable").appendChild(createTransactionRow(t)));
+  }
+}
+
+// -----------------------------------
+// TRANSACTION PAGE
+// -----------------------------------
+
+function renderTransactions(){
+  const filter=$("typeFilter").value;
+  const data=monthData().filter(t=>filter==="All" || t.type===filter)
+    .sort((a,b)=>b.date.localeCompare(a.date));
+
+  $("allTable").innerHTML="";
+
+  if(!data.length){
+    $("allTable").innerHTML='<tr><td colspan="7" class="empty">No transactions found.</td></tr>';
+    return;
+  }
+
+  data.forEach(t=>$("allTable").appendChild(createTransactionRow(t,true)));
+}
+
+$("typeFilter").addEventListener("change",renderTransactions);
+
+// -----------------------------------
+// REPORTS
+// -----------------------------------
+
+function renderReports(){
+  const {data,income,expense,balance}=selectedTotals();
+  const days=new Date(
+    Number(selectedMonth().slice(0,4)),
+    Number(selectedMonth().slice(5,7)),0
+  ).getDate();
+
+  const avg=expense/days;
+  const highest=data.filter(t=>t.type==="Expense")
+    .reduce((max,t)=>Math.max(max,t.amount),0);
+
+  const rate=income>0?balance/income*100:0;
+
+  $("reportCount").textContent=data.length;
+  $("dailyAverage").textContent=rupee(avg);
+  $("highestExpense").textContent=rupee(highest);
+  $("savingRate").textContent=rate.toFixed(1)+"%";
+
+  $("reportCategories").innerHTML=categoryHTML(data);
+  $("reportSummary").textContent=
+    `Income: ${rupee(income)} | Expenses: ${rupee(expense)} | Balance: ${rupee(balance)}. `+
+    (income===0
+      ?"Add your income to calculate a meaningful savings rate."
+      :balance>=0
+        ?"You have a positive balance for this month."
+        :"Your expenses are higher than your income this month.");
+}
+
+// -----------------------------------
+// SETTINGS
+// -----------------------------------
+
+function saveSettings(){
+  const value=Number($("rentSetting").value);
+  if(!Number.isFinite(value)||value<0){
+    alert("Enter a valid rent amount.");
+    return;
+  }
+  settings.rent=value;
+  saveData();
+  render();
+  alert("Settings saved successfully!");
+}
+
+// -----------------------------------
+// CSV EXPORT AND JSON BACKUP
+// -----------------------------------
+
+function exportCSV(){
+  const data=monthData();
+  if(!data.length){alert("No data to export.");return;}
+
+  const rows=[
+    ["Date","Type","Category","Description","Method","Amount"],
+    ...data.map(t=>[t.date,t.type,t.category,t.description,t.method,t.amount])
+  ];
+
+  const csv=rows.map(row=>
+    row.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(",")
+  ).join("\n");
+
+  downloadFile("\uFEFF"+csv,"text/csv","Tiwari-Ledger-"+selectedMonth()+".csv");
+}
+
+function downloadBackup(){
+  const backup={app:"TIWARI LEDGER",version:2,settings,transactions};
+  downloadFile(JSON.stringify(backup,null,2),"application/json","Tiwari-Ledger-Backup.json");
+}
+
+function downloadFile(content,type,name){
+  const blob=new Blob([content],{type});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;
+  a.download=name;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+function importBackup(){
+  const file=$("importFile").files[0];
+  if(!file){alert("Select a JSON backup file first.");return;}
+
+  const reader=new FileReader();
+  reader.onload=()=>{
+    try{
+      const backup=JSON.parse(reader.result);
+      const list=Array.isArray(backup)?backup:backup.transactions;
+
+      if(!Array.isArray(list))throw Error("Invalid backup");
+
+      const valid=list.every(t=>
+        t && typeof t.id==="string" &&
+        ["Income","Expense"].includes(t.type) &&
+        categories.includes(t.category) &&
+        typeof t.description==="string" &&
+        Number.isFinite(Number(t.amount)) &&
+        Number(t.amount)>0 &&
+        /^\d{4}-\d{2}-\d{2}$/.test(t.date) &&
+        ["Cash","UPI","Debit Card","Bank Transfer"].includes(t.method)
+      );
+
+      if(!valid)throw Error("Invalid transaction data");
+
+      if(!confirm("Import this backup and replace current transactions?"))return;
+
+      transactions=list;
+
+      if(!Array.isArray(backup) && backup.settings &&
+         Number.isFinite(Number(backup.settings.rent)) &&
+         Number(backup.settings.rent)>=0){
+        settings.rent=Number(backup.settings.rent);
+      }
+
+      saveData();
+      render();
+      alert("Backup restored successfully!");
+    }catch(e){
+      alert("Invalid or unsupported backup file.");
+    }
+  };
+  reader.readAsText(file);
+}
+
+// -----------------------------------
+// DELETE DATA
+// -----------------------------------
+
+function deleteAll(){
+  if(!confirm("This will permanently delete all transactions. Continue?"))return;
+  transactions=[];
+  saveData();
+  render();
+  alert("All transactions deleted.");
+}
+
+// -----------------------------------
+// RENDER ALL
+// -----------------------------------
+
+function render(){
+  renderDashboard();
+  renderTransactions();
+  renderReports();
+  $("rentSetting").value=settings.rent;
+}
+
+$("monthPicker").addEventListener("change",render);
+
+render();
+
+</script>
 </body>
 </html>
